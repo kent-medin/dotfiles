@@ -10,4 +10,6 @@ alias v='nvim'
 alias ls='exa -al'
 alias p='ps -U $USER'
 alias dot='cd ~/dotfiles/'
-alias a='aria2'
+alias a='aria2c'
+alias am='wl-paste | aria2c --seed-time=0 -i -'
+
