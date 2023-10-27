@@ -71,6 +71,7 @@ echo "-------------------------------------"
 echo ""
 
 _installSymLink kitty ~/.config/kitty ~/dotfiles/kitty/ ~/.config
+_installSymLink fish ~/.config/fish ~/dotfiles/fish/ ~/.config
 _installSymLink ranger ~/.config/ranger ~/dotfiles/ranger/ ~/.config
 _installSymLink vim ~/.config/vim ~/dotfiles/vim/ ~/.config
 _installSymLink nvim ~/.config/nvim ~/dotfiles/nvim/ ~/.config
