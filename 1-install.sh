@@ -1,13 +1,13 @@
 #/bin/bash
-#  ___           _        _ _  
-# |_ _|_ __  ___| |_ __ _| | | 
-#  | || '_ \/ __| __/ _` | | | 
-#  | || | | \__ \ || (_| | | | 
-# |___|_| |_|___/\__\__,_|_|_| 
-#                              
-# by Stephan Raabe (2023) 
+#  ___           _        _ _
+# |_ _|_ __  ___| |_ __ _| | |
+#  | || '_ \/ __| __/ _` | | |
+#  | || | | \__ \ || (_| | | |
+# |___|_| |_|___/\__\__,_|_|_|
+#
+# by Stephan Raabe (2023)
 # modded by Kent Medin
-# ----------------------------------------------------- 
+# -----------------------------------------------------
 # Install Script for required packages
 # ------------------------------------------------------
 
@@ -63,7 +63,7 @@ while true; do
         [Yy]* )
             echo "Installation started."
         break;;
-        [Nn]* ) 
+        [Nn]* )
             exit;
         break;;
         * ) echo "Please answer yes or no.";;
@@ -78,33 +78,34 @@ echo "-> Install main packages"
 
 packagesPacman=(
     "pacman-contrib"
-    "kitty" 
-    "rofi" 
-    "firefox"  
-    "dunst" 
+    "kitty"
+    "rofi"
+    "firefox"
+    "dunst"
     "starship"
-    "neovim" 
-    "mpv" 
-    "freerdp" 
-    "xfce4-power-manager" 
-    "thunar" 
-    "mousepad" 
-    "ttf-font-awesome" 
-    "ttf-fira-sans" 
-    "ttf-fira-code" 
-    "ttf-firacode-nerd" 
+    "neovim"
+    "mpv"
+    "freerdp"
+    "xfce4-power-manager"
+    "thunar"
+    "thunar-volman"
+    "mousepad"
+    "ttf-font-awesome"
+    "ttf-fira-sans"
+    "ttf-fira-code"
+    "ttf-firacode-nerd"
     "figlet"
     "fish"
-    "vlc" 
-    "eza" 
-    "python-pip" 
-    "python-psutil" 
-    "python-rich" 
-    "python-click" 
+    "vlc"
+    "eza"
+    "python-pip"
+    "python-psutil"
+    "python-rich"
+    "python-click"
     "xdg-desktop-portal-gtk"
-    "pavucontrol" 
-    "tumbler" 
-    "xautolock" 
+    "pavucontrol"
+    "tumbler"
+    "xautolock"
     "blueman"
     "sddm"
     "papirus-icon-theme"
@@ -115,13 +116,18 @@ packagesPacman=(
     "swayidle"
     "swappy"
     "cliphist"
-
+    "pipewire"
+    "wireplumber"
+    "npm"
+    "aria2"
+    "fastfetch"
+    "github-cli"
 );
 
 packagesYay=(
-    "brave-bin" 
-    "pfetch" 
-    "bibata-cursor-theme" 
+    "brave-bin"
+    "pfetch"
+    "bibata-cursor-theme"
     "trizen"
     "sddm-sugar-dark"
     "swww"
@@ -129,7 +135,7 @@ packagesYay=(
     "wlogout"
     "waybar-hyprland"
 );
-  
+
 # ------------------------------------------------------
 # Install required packages
 # ------------------------------------------------------
@@ -166,7 +172,7 @@ while true; do
         [Yy]* )
             sudo systemctl enable sddm.service
         break;;
-        [Nn]* ) 
+        [Nn]* )
             echo "sddm installation skipped."
         break;;
         * ) echo "Please answer yes or no.";;
@@ -190,7 +196,7 @@ while true; do
             fi
             echo "Wallpaper installed."
         break;;
-        [Nn]* ) 
+        [Nn]* )
             if [ -d ~/wallpaper/ ]; then
                 echo "wallpaper folder already exists."
             else
@@ -223,5 +229,5 @@ echo "default wallpaper copied."
 # DONE
 # ------------------------------------------------------
 #clear
-echo "DONE!" 
+echo "DONE!"
 echo "NEXT: Please continue with 2-dotfiles.sh"
